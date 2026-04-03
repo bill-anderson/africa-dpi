@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Africa DPI Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #FAF9F6;
+  --surface: #FFFFFF;
+  --border: #E5E2DB;
+  --text: #1A1A1A;
+  --text-muted: #6B6560;
+  --text-light: #9B958E;
+  --accent: #20808D;
+  --accent-hover: #1A6B76;
+  --score-0: #EEEDE9;
+  --score-1: #C4533A;
+  --score-2: #E8913A;
+  --score-3: #ECC94B;
+  --score-4: #48A67B;
+  --score-5: #20808D;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* Chapter Tabs */
+.chapter-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 8px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  flex-shrink: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.chapter-tabs::-webkit-scrollbar {
+  height: 4px;
+}
+
+.chapter-tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chapter-tabs::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+.chapter-tab {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.chapter-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.chapter-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+/* Main Layout */
+.main {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.left-panel {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+}
+
+.right-panel {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+/* Controls Row (Section + Variable selectors) */
+.controls-row {
+  display: flex;
+  gap: 12px;
+  padding: 10px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.control-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+}
+
+.control-select {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  width: 100%;
+  min-width: 0;
+}
+
+.control-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Legend + Definition Area ABOVE map */
+.legend-area {
+  padding: 8px 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.variable-definition {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.legend-row {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  border: 1px solid rgba(0,0,0,0.08);
+  flex-shrink: 0;
+}
+
+/* Map Container */
+.map-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.map-container svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Tooltip */
+.tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-size: 12px;
+  max-width: 280px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.tooltip.visible { opacity: 1; }
+
+.tooltip-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tooltip-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tooltip-comment {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.3;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.tooltip-cta {
+  font-size: 10px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Distribution Bar */
+.distribution-bar {
+  display: flex;
+  padding: 6px 16px 8px;
+  gap: 2px;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  align-items: flex-end;
+}
+
+.dist-segment {
+  flex: 1;
+  text-align: center;
+  font-size: 10px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.dist-bar {
+  width: 100%;
+  border-radius: 3px 3px 0 0;
+  min-height: 2px;
+  transition: height 0.3s ease;
+}
+
+.dist-count {
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--text);
+}
+
+.dist-label {
+  font-size: 9px;
+  color: var(--text-light);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Right Panel: Chapter Details */
+.chapter-details-box {
+  padding: 10px 14px;
+  margin: 10px 10px 0 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.chapter-details-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.chapter-details-text {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Search */
+.search-area {
+  padding: 8px 10px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.search-input::placeholder {
+  color: var(--text-light);
+}
+
+/* Country Cards */
+.cards-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 10px 10px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.country-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  background: var(--surface);
+  transition: all 0.15s ease;
+}
+
+.country-card:hover {
+  border-color: var(--accent);
+  background: #F5FAFB;
+}
+
+.card-iso {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-light);
+  background: var(--bg);
+  padding: 2px 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.card-name {
+  font-size: 13px;
+  font-weight: 500;
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* Detail Panel */
+.detail-panel {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  display: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.detail-panel.active {
+  display: block;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.detail-country-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.detail-iso {
+  font-size: 11px;
+  color: var(--text-light);
+}
+
+.detail-close {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.detail-close:hover {
+  background: var(--score-1);
+  color: white;
+  border-color: var(--score-1);
+}
+
+.detail-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 14px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-var-row {
+  padding: 6px 0;
+  border-bottom: 1px solid #F0EFEB;
+}
+
+.detail-var-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 3px;
+}
+
+.detail-var-score {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 3px;
+}
+
+.detail-var-badge {
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.detail-var-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.detail-var-year {
+  font-size: 10px;
+  color: var(--text-light);
+}
+
+.detail-var-comment {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-top: 3px;
+}
+
+.detail-var-sources {
+  margin-top: 3px;
+}
+
+.detail-var-sources a {
+  font-size: 10px;
+  color: var(--accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.detail-var-sources a:hover {
+  text-decoration: underline;
+}
+
+/* Cards List wrapper */
+.cards-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+}
+
+.cards-list-wrapper.hidden {
+  display: none;
+}
+
+/* Seychelles circle */
+.seychelles-marker {
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <h1>Africa Digital Public Infrastructure</h1>
+    <p>Comparative assessment across 54 countries</p>
+  </div>
+
+  <div class="chapter-tabs" id="chapterTabs"></div>
+
+  <div class="main">
+    <div class="left-panel">
+      <div class="controls-row">
+        <div class="control-group">
+          <label class="control-label">Section</label>
+          <select class="control-select" id="sectionSelect"></select>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Variable</label>
+          <select class="control-select" id="variableSelect"></select>
+        </div>
+      </div>
+
+      <div class="legend-area" id="legendArea">
+        <div class="variable-definition" id="variableDefinition"></div>
+        <div class="legend-row" id="legendRow"></div>
+      </div>
+
+      <div class="map-container" id="mapContainer"></div>
+
+      <div class="distribution-bar" id="distributionBar"></div>
+    </div>
+
+    <div class="right-panel">
+      <div class="chapter-details-box" id="chapterDetailsBox">
+        <div class="chapter-details-title" id="chapterDetailsTitle"></div>
+        <div class="chapter-details-text" id="chapterDetailsText"></div>
+      </div>
+
+      <div class="cards-list-wrapper" id="cardsListWrapper">
+        <div class="search-area">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search countries...">
+        </div>
+        <div class="cards-container" id="cardsContainer"></div>
+      </div>
+
+      <div class="detail-panel" id="detailPanel"></div>
+    </div>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+(async function() {
+
+// ---------- DATA LOAD ----------
+const [dpiData, geoData] = await Promise.all([
+  fetch('africa-dpi-data.json').then(r => r.json()),
+  fetch('africa.geojson').then(r => r.json())
+]);
+
+const { hierarchy, countries } = dpiData;
+
+// Build lookup: iso3 -> country
+const countryByIso = {};
+countries.forEach(c => { countryByIso[c.iso3] = c; });
+
+// ---------- STATE ----------
+let currentChapter = 0;
+let currentSection = 0;
+let currentVariable = 0;
+let selectedCountryIso = null;
+let searchQuery = '';
+
+// ---------- COLOUR LOGIC ----------
+const COLOR_PALETTE = ['#C4533A', '#E8913A', '#ECC94B', '#48A67B', '#20808D'];
+const GREY = '#EEEDE9';
+
+function getColorsForVariable(variable) {
+  const scale = variable.scale;
+  const codes = Object.keys(scale).map(Number).sort((a,b) => a-b);
+  const nonZeroCodes = codes.filter(c => c > 0);
+  const maxCode = nonZeroCodes.length > 0 ? Math.max(...nonZeroCodes) : 0;
+
+  const colorMap = {};
+  // Code 0 always grey
+  if (codes.includes(0)) {
+    colorMap[0] = GREY;
+  }
+
+  if (nonZeroCodes.length === 0) {
+    return { colorMap, maxCode: 0 };
+  }
+
+  if (nonZeroCodes.length === 1) {
+    colorMap[nonZeroCodes[0]] = COLOR_PALETTE[4]; // teal
+  } else if (nonZeroCodes.length === 2) {
+    colorMap[nonZeroCodes[0]] = COLOR_PALETTE[0]; // red
+    colorMap[nonZeroCodes[1]] = COLOR_PALETTE[4]; // teal
+  } else {
+    // Distribute colors evenly
+    const n = nonZeroCodes.length;
+    for (let i = 0; i < n; i++) {
+      const paletteIdx = Math.round(i * (COLOR_PALETTE.length - 1) / (n - 1));
+      colorMap[nonZeroCodes[i]] = COLOR_PALETTE[paletteIdx];
+    }
+  }
+
+  return { colorMap, maxCode };
+}
+
+function getColorForCode(code, colorMap) {
+  if (code === 0 || code === undefined || code === null) return GREY;
+  return colorMap[code] || GREY;
+}
+
+function getTextColorForBg(bgColor) {
+  if (!bgColor || bgColor === GREY) return '#6B6560';
+  const hex = bgColor.replace('#', '');
+  const r = parseInt(hex.substr(0, 2), 16);
+  const g = parseInt(hex.substr(2, 2), 16);
+  const b = parseInt(hex.substr(4, 2), 16);
+  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return lum > 0.55 ? '#1A1A1A' : '#FFFFFF';
+}
+
+// ---------- GET CURRENT VARIABLE ----------
+function getCurrentVariable() {
+  const ch = hierarchy[currentChapter];
+  if (!ch || !ch.sections[currentSection]) return null;
+  return ch.sections[currentSection].variables[currentVariable] || null;
+}
+
+function getCountryScore(iso3, variableId) {
+  const country = countryByIso[iso3];
+  if (!country || !country.data) return null;
+  return country.data[variableId] || null;
+}
+
+// ---------- RENDER CHAPTER TABS ----------
+function renderChapterTabs() {
+  const container = document.getElementById('chapterTabs');
+  container.innerHTML = '';
+  hierarchy.forEach((ch, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'chapter-tab' + (i === currentChapter ? ' active' : '');
+    btn.textContent = ch.name;
+    btn.addEventListener('click', () => {
+      if (i !== currentChapter) {
+        currentChapter = i;
+        currentSection = 0;
+        currentVariable = 0;
+        // Mod 8: Close detail panel on chapter switch
+        closeDetailPanel();
+        renderAll();
+      }
+    });
+    container.appendChild(btn);
+  });
+}
+
+// ---------- RENDER CONTROLS ----------
+function renderControls() {
+  const ch = hierarchy[currentChapter];
+  const sectionSelect = document.getElementById('sectionSelect');
+  const variableSelect = document.getElementById('variableSelect');
+
+  sectionSelect.innerHTML = '';
+  ch.sections.forEach((sec, i) => {
+    const opt = document.createElement('option');
+    opt.value = i;
+    opt.textContent = sec.name;
+    opt.selected = i === currentSection;
+    sectionSelect.appendChild(opt);
+  });
+
+  const sec = ch.sections[currentSection];
+  variableSelect.innerHTML = '';
+  if (sec) {
+    sec.variables.forEach((v, i) => {
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = v.name;
+      opt.selected = i === currentVariable;
+      variableSelect.appendChild(opt);
+    });
+  }
+}
+
+document.getElementById('sectionSelect').addEventListener('change', function() {
+  currentSection = parseInt(this.value);
+  currentVariable = 0;
+  renderControls();
+  renderLegend();
+  renderMap();
+  renderDistribution();
+  renderCards();
+});
+
+document.getElementById('variableSelect').addEventListener('change', function() {
+  currentVariable = parseInt(this.value);
+  renderLegend();
+  renderMap();
+  renderDistribution();
+  renderCards();
+});
+
+// ---------- RENDER LEGEND + DEFINITION ----------
+function renderLegend() {
+  const variable = getCurrentVariable();
+  const defEl = document.getElementById('variableDefinition');
+  const legendRow = document.getElementById('legendRow');
+
+  if (!variable) {
+    defEl.textContent = '';
+    legendRow.innerHTML = '';
+    return;
+  }
+
+  defEl.textContent = variable.definition || '';
+
+  const { colorMap } = getColorsForVariable(variable);
+  const codes = Object.keys(variable.scale).map(Number).sort((a,b) => a-b);
+
+  legendRow.innerHTML = '';
+  codes.forEach(code => {
+    const item = document.createElement('div');
+    item.className = 'legend-item';
+    const color = getColorForCode(code, colorMap);
+    item.innerHTML = `<span class="legend-swatch" style="background:${color}"></span>
+      <span>${code}: ${variable.scale[code]}</span>`;
+    legendRow.appendChild(item);
+  });
+}
+
+// ---------- CHAPTER DETAILS ----------
+function renderChapterDetails() {
+  const ch = hierarchy[currentChapter];
+  document.getElementById('chapterDetailsTitle').textContent = ch.name;
+  document.getElementById('chapterDetailsText').textContent = ch.details || '';
+}
+
+// ---------- MAP ----------
+let mapSvg, mapG, projection, pathGen;
+
+function initMap() {
+  const container = document.getElementById('mapContainer');
+  mapSvg = d3.select(container).append('svg');
+  mapG = mapSvg.append('g');
+
+  projection = d3.geoMercator();
+  pathGen = d3.geoPath().projection(projection);
+}
+
+function renderMap() {
+  const container = document.getElementById('mapContainer');
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+
+  if (width === 0 || height === 0) return;
+
+  mapSvg.attr('viewBox', `0 0 ${width} ${height}`);
+
+  // Fit projection to Africa bounds with minimal padding
+  projection.fitExtent(
+    [[10, 10], [width - 10, height - 10]],
+    geoData
+  );
+
+  const variable = getCurrentVariable();
+  const varColors = variable ? getColorsForVariable(variable) : { colorMap: {} };
+
+  // Draw countries
+  const paths = mapG.selectAll('path.country')
+    .data(geoData.features, d => d.properties.iso3);
+
+  paths.enter()
+    .append('path')
+    .attr('class', 'country')
+    .attr('stroke', '#FFFFFF')
+    .attr('stroke-width', 0.5)
+    .style('cursor', 'pointer')
+    .on('mouseover', handleMouseOver)
+    .on('mousemove', handleMouseMove)
+    .on('mouseout', handleMouseOut)
+    .on('click', handleClick)
+    .merge(paths)
+    .attr('d', pathGen)
+    .attr('fill', d => {
+      if (!variable) return GREY;
+      const score = getCountryScore(d.properties.iso3, variable.id);
+      if (!score) return GREY;
+      return getColorForCode(score.code, varColors.colorMap);
+    });
+
+  paths.exit().remove();
+
+  // Seychelles circle marker
+  const seychellesCoord = projection([55.45, -4.68]);
+  const seychellesScore = variable ? getCountryScore('SYC', variable.id) : null;
+  const seychellesColor = seychellesScore ? getColorForCode(seychellesScore.code, varColors.colorMap) : GREY;
+
+  let seychellesGroup = mapG.selectAll('g.seychelles-marker').data([1]);
+  const seychellesEnter = seychellesGroup.enter()
+    .append('g')
+    .attr('class', 'seychelles-marker')
+    .style('cursor', 'pointer');
+
+  seychellesEnter.append('circle')
+    .attr('r', 6)
+    .attr('stroke', '#FFFFFF')
+    .attr('stroke-width', 1);
+
+  seychellesEnter.append('text')
+    .attr('dy', -10)
+    .attr('text-anchor', 'middle')
+    .attr('font-size', '9px')
+    .attr('font-family', 'DM Sans, sans-serif')
+    .attr('fill', '#6B6560')
+    .text('SYC');
+
+  seychellesGroup = seychellesGroup.merge(seychellesEnter);
+  seychellesGroup.attr('transform', `translate(${seychellesCoord[0]},${seychellesCoord[1]})`);
+  seychellesGroup.select('circle').attr('fill', seychellesColor);
+
+  // Create fake feature for Seychelles mouse events
+  const seychellesFakeFeature = { properties: { iso3: 'SYC', name: 'Seychelles' } };
+  seychellesGroup
+    .on('mouseover', (event) => handleMouseOver.call(null, event, seychellesFakeFeature))
+    .on('mousemove', (event) => handleMouseMove.call(null, event, seychellesFakeFeature))
+    .on('mouseout', (event) => handleMouseOut.call(null, event, seychellesFakeFeature))
+    .on('click', (event) => handleClick.call(null, event, seychellesFakeFeature));
+}
+
+// ---------- TOOLTIP ----------
+const tooltipEl = document.getElementById('tooltip');
+
+function handleMouseOver(event, d) {
+  tooltipEl.classList.add('visible');
+}
+
+function handleMouseMove(event, d) {
+  const variable = getCurrentVariable();
+  const iso3 = d.properties.iso3;
+  const country = countryByIso[iso3];
+  const score = variable ? getCountryScore(iso3, variable.id) : null;
+
+  let html = `<div class="tooltip-name">${d.properties.name || (country ? country.name : iso3)}</div>`;
+
+  if (score) {
+    const varColors = getColorsForVariable(variable);
+    const color = getColorForCode(score.code, varColors.colorMap);
+    const textColor = getTextColorForBg(color);
+    html += `<div class="tooltip-badge" style="background:${color};color:${textColor}">${score.code}: ${score.label}</div>`;
+    if (score.comments) {
+      html += `<div class="tooltip-comment">${score.comments}</div>`;
+    }
+  } else {
+    html += `<div style="font-size:11px;color:var(--text-light)">No data</div>`;
+  }
+  html += `<div class="tooltip-cta">Click for details →</div>`;
+
+  tooltipEl.innerHTML = html;
+
+  const x = event.clientX + 15;
+  const y = event.clientY + 15;
+  const tw = tooltipEl.offsetWidth;
+  const th = tooltipEl.offsetHeight;
+  const finalX = x + tw > window.innerWidth ? event.clientX - tw - 10 : x;
+  const finalY = y + th > window.innerHeight ? event.clientY - th - 10 : y;
+
+  tooltipEl.style.left = finalX + 'px';
+  tooltipEl.style.top = finalY + 'px';
+}
+
+function handleMouseOut(event, d) {
+  tooltipEl.classList.remove('visible');
+}
+
+function handleClick(event, d) {
+  const iso3 = d.properties.iso3;
+  selectedCountryIso = iso3;
+  showDetailPanel(iso3);
+}
+
+// ---------- DISTRIBUTION BAR ----------
+function renderDistribution() {
+  const container = document.getElementById('distributionBar');
+  const variable = getCurrentVariable();
+  if (!variable) { container.innerHTML = ''; return; }
+
+  const { colorMap } = getColorsForVariable(variable);
+  const codes = Object.keys(variable.scale).map(Number).sort((a,b) => a-b);
+
+  const counts = {};
+  codes.forEach(c => counts[c] = 0);
+
+  countries.forEach(c => {
+    const score = c.data ? c.data[variable.id] : null;
+    if (score && counts[score.code] !== undefined) {
+      counts[score.code]++;
+    } else {
+      // Count as 0 / NA if no data
+      if (counts[0] !== undefined) counts[0]++;
+    }
+  });
+
+  const maxCount = Math.max(...Object.values(counts), 1);
+
+  container.innerHTML = '';
+  codes.forEach(code => {
+    const seg = document.createElement('div');
+    seg.className = 'dist-segment';
+    const barHeight = Math.max(2, (counts[code] / maxCount) * 40);
+    const color = getColorForCode(code, colorMap);
+    seg.innerHTML = `
+      <div class="dist-count">${counts[code]}</div>
+      <div class="dist-bar" style="background:${color};height:${barHeight}px"></div>
+      <div class="dist-label" title="${variable.scale[code]}">${variable.scale[code]}</div>
+    `;
+    container.appendChild(seg);
+  });
+}
+
+// ---------- CARDS ----------
+function renderCards() {
+  const container = document.getElementById('cardsContainer');
+  const variable = getCurrentVariable();
+  const varColors = variable ? getColorsForVariable(variable) : { colorMap: {} };
+
+  const sorted = [...countries].sort((a, b) => a.name.localeCompare(b.name));
+  const filtered = searchQuery
+    ? sorted.filter(c => c.name.toLowerCase().includes(searchQuery.toLowerCase()) || c.iso3.toLowerCase().includes(searchQuery.toLowerCase()))
+    : sorted;
+
+  container.innerHTML = '';
+  filtered.forEach(c => {
+    const score = variable && c.data ? c.data[variable.id] : null;
+    const card = document.createElement('div');
+    card.className = 'country-card';
+
+    let badgeHtml = '';
+    if (score) {
+      const color = getColorForCode(score.code, varColors.colorMap);
+      const textColor = getTextColorForBg(color);
+      badgeHtml = `<span class="card-badge" style="background:${color};color:${textColor}">${score.code}</span>`;
+    } else {
+      badgeHtml = `<span class="card-badge" style="background:${GREY};color:#6B6560">—</span>`;
+    }
+
+    card.innerHTML = `
+      <span class="card-iso">${c.iso3}</span>
+      <span class="card-name">${c.name}</span>
+      ${badgeHtml}
+    `;
+
+    card.addEventListener('click', () => {
+      selectedCountryIso = c.iso3;
+      showDetailPanel(c.iso3);
+    });
+
+    container.appendChild(card);
+  });
+}
+
+document.getElementById('searchInput').addEventListener('input', function() {
+  searchQuery = this.value;
+  renderCards();
+});
+
+// ---------- DETAIL PANEL ----------
+function showDetailPanel(iso3) {
+  const country = countryByIso[iso3];
+  if (!country) return;
+
+  const panel = document.getElementById('detailPanel');
+  const cardsWrapper = document.getElementById('cardsListWrapper');
+
+  cardsWrapper.classList.add('hidden');
+  panel.classList.add('active');
+
+  const ch = hierarchy[currentChapter];
+
+  let html = `
+    <div class="detail-header">
+      <div>
+        <div class="detail-country-name">${country.name}</div>
+        <div class="detail-iso">${country.iso3}</div>
+      </div>
+      <button class="detail-close" id="detailClose">✕</button>
+    </div>
+  `;
+
+  ch.sections.forEach(sec => {
+    html += `<div class="detail-section-title">${sec.name}</div>`;
+    sec.variables.forEach(v => {
+      const score = country.data ? country.data[v.id] : null;
+      const varColors = getColorsForVariable(v);
+
+      html += `<div class="detail-var-row">`;
+      html += `<div class="detail-var-name">${v.name}</div>`;
+
+      if (score) {
+        const color = getColorForCode(score.code, varColors.colorMap);
+        const textColor = getTextColorForBg(color);
+        html += `<div class="detail-var-score">
+          <span class="detail-var-badge" style="background:${color};color:${textColor}">${score.code}</span>
+          <span class="detail-var-label">${score.label}</span>
+          ${score.year ? `<span class="detail-var-year">(${score.year})</span>` : ''}
+        </div>`;
+        if (score.comments) {
+          html += `<div class="detail-var-comment">${score.comments}</div>`;
+        }
+        if (score.sources) {
+          html += `<div class="detail-var-sources">`;
+          score.sources.split(';').forEach(s => {
+            const url = s.trim();
+            if (url) {
+              html += `<a href="${url}" target="_blank" rel="noopener">${url}</a><br>`;
+            }
+          });
+          html += `</div>`;
+        }
+      } else {
+        html += `<div class="detail-var-label" style="color:var(--text-light)">No data</div>`;
+      }
+
+      html += `</div>`;
+    });
+  });
+
+  panel.innerHTML = html;
+
+  document.getElementById('detailClose').addEventListener('click', () => {
+    closeDetailPanel();
+  });
+}
+
+function closeDetailPanel() {
+  const panel = document.getElementById('detailPanel');
+  const cardsWrapper = document.getElementById('cardsListWrapper');
+  panel.classList.remove('active');
+  panel.innerHTML = '';
+  cardsWrapper.classList.remove('hidden');
+  selectedCountryIso = null;
+}
+
+// ---------- RENDER ALL ----------
+function renderAll() {
+  renderChapterTabs();
+  renderChapterDetails();
+  renderControls();
+  renderLegend();
+  renderMap();
+  renderDistribution();
+  renderCards();
+}
+
+// ---------- INIT ----------
+initMap();
+renderAll();
+
+// Resize handler
+window.addEventListener('resize', () => {
+  renderMap();
+});
+
+})();
+</script>
+</body>
+</html>
