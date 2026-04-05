@@ -1,3 +1,0 @@
-# About
-
-Testing about file
