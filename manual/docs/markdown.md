@@ -2,6 +2,8 @@
 icon: simple/markdown
 ---
 
+For full documentation visit [zensical.org](https://zensical.org/docs/).
+
 # Markdown in 5min
 
 ## Headers
