@@ -14,8 +14,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Specify AI use cases in the comments: fraud detection, eligibility prediction, service recommendation, data quality assurance, policy simulation |
 | Data Collection Guidelines | Search for AI strategies, digital transformation roadmaps section on analytics, smart government initiatives, mentions of machine learning in service delivery |
 
-## System
-
 ### Operational Status
 
 | Field | Value |
@@ -37,8 +35,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=None; 2=Mentioned in Broader DPI/Digital Strategy; 3=Under Development; 4=Comprehensive Strategy Exists |
 | Other Metadata | Include incomments document name, year published, planning horizon. Note if includes phased implementation approach |
 | Data Collection Guidelines | Search national digital transformation roadmaps, e-government strategies, DPI strategies, interoperability frameworks, whole-of-government ICT policies |
-
-## Governance
 
 ### Implementation Roadmap
 
@@ -62,8 +58,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Search digital identity strategies, authentication frameworks, Digital ID system documentation, service delivery platforms, identity verification protocols |
 
-## Functionality
-
 ### Civil Registration & Vital Statistics Integration
 
 | Field | Value |
@@ -73,8 +67,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review civil registration modernization strategies, Home Affairs digital transformation plans, vital statistics system assessments, service integration reports |
-
-## Functionality
 
 ### Digital Payments Integration
 
@@ -86,8 +78,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Search digital payments strategies, G2P payment system documentation, financial inclusion frameworks, payment ecosystem modernization programs |
 
-## Functionality
-
 ### Tax & Revenue Integration
 
 | Field | Value |
@@ -97,8 +87,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review tax administration modernization programs, revenue authority strategic plans, taxpayer services digitization initiatives |
-
-## Functionality
 
 ### Electoral Register Integration
 
@@ -110,8 +98,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Search electoral commission strategic plans, voter registration system documentation, election management body reports, data sharing agreements |
 
-## Functionality
-
 ### Passport & Immigration Integration
 
 | Field | Value |
@@ -121,8 +107,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review immigration authority digital strategies, border management systems, passport issuance modernization programs |
-
-## Functionality
 
 ### Driver Licensing Integration
 
@@ -134,8 +118,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Search transport department digital strategies, licensing authority modernization plans, road traffic management systems |
 
-## Functionality
-
 ### Health System Integration
 
 | Field | Value |
@@ -145,8 +127,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review health sector digital transformation strategies, eHealth frameworks, health information exchange initiatives, universal health coverage digitization |
-
-## Functionality
 
 ### Education System Integration
 
@@ -158,8 +138,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Search education management information systems, digital education strategies, qualification verification frameworks, student aid digitization programs |
 
-## Functionality
-
 ### Social Protection Integration
 
 | Field | Value |
@@ -169,8 +147,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review social protection strategies, SASSA-type agency plans, social registry frameworks, adaptive social protection programs, shock-responsive systems |
-
-## Functionality
 
 ### Agriculture System Integration
 
@@ -182,8 +158,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Search agricultural digitization strategies, farmer support program documentation, land administration systems, agri-tech initiatives |
 
-## Functionality
-
 ### Justice System Integration
 
 | Field | Value |
@@ -193,8 +167,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review justice sector ICT strategies, court digitization programs, case management system modernization, legal information systems |
-
-## Functionality
 
 ### National Planning & Statistics Integration
 
@@ -206,8 +178,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Search national statistics strategies, census digitization, secure data facility documentation, statistical business registers, data for development initiatives |
 
-## Functionality
-
 ### Employment Services Integration
 
 | Field | Value |
@@ -217,8 +187,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review labor department digital strategies, employment services modernization, unemployment insurance system documentation, youth employment platforms |
-
-## Functionality
 
 ### Business Registration & Licensing Integration
 
@@ -254,8 +222,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review digital inclusion strategies, assistive digital policies, service design guidelines, disability inclusion frameworks, universal access commitments |
 
-## Inclusivity
-
 ### Urban-Rural Digital Divide
 
 | Field | Value |
@@ -277,8 +243,6 @@ Variable definitions and collection guidance for the data exchange module.
 | Format | Categorical: 0=Unknown; 1=None; 2=Low = Limited Disclosure; 3=Moderate = Annual Reports; 4=High = Public Dashboard & Reports |
 | Other Metadata | Provide details in Comments |
 | Data Collection Guidelines | Review open government commitments, transparency portals, public API catalogs, open data initiatives, right to information disclosures |
-
-## Credibility
 
 ### Data Sovereignty Provisions
 

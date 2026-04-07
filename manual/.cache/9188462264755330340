@@ -1,7 +1,7 @@
 {
   "data": {
     "meta": {},
-    "content": "<h1 id=\"data-exchange-metadata\">Data exchange metadata<a class=\"headerlink\" href=\"#data-exchange-metadata\" title=\"Permanent link\">&para;</a></h1>\n<p>Variable definitions and collection guidance for the data exchange module.</p>\n<h2 id=\"system\">System<a class=\"headerlink\" href=\"#system\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"aianalytics-capabilities\">AI/Analytics Capabilities<a class=\"headerlink\" href=\"#aianalytics-capabilities\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-system-ai</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Is artificial intelligence integrated into the data exchange for data quality, fraud detection or predictive analytics</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No; 2=Planned; 3=Piloting; 4 =Functional across at least 2 systems</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Specify AI use cases in the comments: fraud detection, eligibility prediction, service recommendation, data quality assurance, policy simulation</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search for AI strategies, digital transformation roadmaps section on analytics, smart government initiatives, mentions of machine learning in service delivery</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"system_1\">System<a class=\"headerlink\" href=\"#system_1\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"operational-status\">Operational Status<a class=\"headerlink\" href=\"#operational-status\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-system-operational</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Current operational status of the data exchange system</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not Established; 2=Planned; 3=Under Development; 4=Partially Operational; 5=Fully Operational</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Add name of system, url to comments. Also include in comments launch date if operational, expected launch if planned.</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review official government announcements, digital transformation roadmap timelines, progress reports from coordinating agencies, news from government portals</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"governance\">Governance<a class=\"headerlink\" href=\"#governance\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"strategic-framework\">Strategic Framework<a class=\"headerlink\" href=\"#strategic-framework\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-gov-strategy</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether a formal strategy or policy document exists specifically for government data exchange and interoperability</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=None; 2=Mentioned in Broader DPI/Digital Strategy; 3=Under Development; 4=Comprehensive Strategy Exists</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Include incomments document name, year published, planning horizon. Note if includes phased implementation approach</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search national digital transformation roadmaps, e-government strategies, DPI strategies, interoperability frameworks, whole-of-government ICT policies</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"governance_1\">Governance<a class=\"headerlink\" href=\"#governance_1\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"implementation-roadmap\">Implementation Roadmap<a class=\"headerlink\" href=\"#implementation-roadmap\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-gov-roadmap</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether a detailed implementation roadmap with phases, milestones, and timelines exists for data exchange development</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No; 2= Under development; 3 = Yes</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Note in comments if roadmap is public, planning horizon (e.g., 2025-2030), number of phases. Include reference to key milestones</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review digital transformation roadmaps, implementation plans, project documents from coordinating ministries, Operation Vulindlela-type reform programs</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality\">Functionality<a class=\"headerlink\" href=\"#functionality\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"digital-id-integration\">Digital ID Integration<a class=\"headerlink\" href=\"#digital-id-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-digitalid</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Extent to which the national digital identity system is integrated with the data exchange for identity verification and authentication</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search digital identity strategies, authentication frameworks, Digital ID system documentation, service delivery platforms, identity verification protocols</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_1\">Functionality<a class=\"headerlink\" href=\"#functionality_1\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"civil-registration-vital-statistics-integration\">Civil Registration &amp; Vital Statistics Integration<a class=\"headerlink\" href=\"#civil-registration-vital-statistics-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-crvs</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of CRVS data (births, deaths, marriages) into data exchange for real-time verification and service eligibility</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review civil registration modernization strategies, Home Affairs digital transformation plans, vital statistics system assessments, service integration reports</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_2\">Functionality<a class=\"headerlink\" href=\"#functionality_2\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"digital-payments-integration\">Digital Payments Integration<a class=\"headerlink\" href=\"#digital-payments-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-payments</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration with national payment systems for government-to-person (G2P), government-to-business (G2B) transactions via data exchange</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search digital payments strategies, G2P payment system documentation, financial inclusion frameworks, payment ecosystem modernization programs</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_3\">Functionality<a class=\"headerlink\" href=\"#functionality_3\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"tax-revenue-integration\">Tax &amp; Revenue Integration<a class=\"headerlink\" href=\"#tax-revenue-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-revenue</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of tax administration and revenue collection systems data into the exchange platform</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review tax administration modernization programs, revenue authority strategic plans, taxpayer services digitization initiatives</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_4\">Functionality<a class=\"headerlink\" href=\"#functionality_4\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"electoral-register-integration\">Electoral Register Integration<a class=\"headerlink\" href=\"#electoral-register-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-electoral</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of voter registration data for identity verification, demographic analysis, and service delivery targeting</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search electoral commission strategic plans, voter registration system documentation, election management body reports, data sharing agreements</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_5\">Functionality<a class=\"headerlink\" href=\"#functionality_5\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"passport-immigration-integration\">Passport &amp; Immigration Integration<a class=\"headerlink\" href=\"#passport-immigration-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-passport</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of passport issuance and immigration control data into the exchange platform</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review immigration authority digital strategies, border management systems, passport issuance modernization programs</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_6\">Functionality<a class=\"headerlink\" href=\"#functionality_6\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"driver-licensing-integration\">Driver Licensing Integration<a class=\"headerlink\" href=\"#driver-licensing-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-licensing</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of driver's license registration and traffic offence data</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search transport department digital strategies, licensing authority modernization plans, road traffic management systems</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_7\">Functionality<a class=\"headerlink\" href=\"#functionality_7\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"health-system-integration\">Health System Integration<a class=\"headerlink\" href=\"#health-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-health</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of health records, patient registration, immunization data, and health insurance into data exchange</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review health sector digital transformation strategies, eHealth frameworks, health information exchange initiatives, universal health coverage digitization</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_8\">Functionality<a class=\"headerlink\" href=\"#functionality_8\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"education-system-integration\">Education System Integration<a class=\"headerlink\" href=\"#education-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-education</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of learner records, academic credentials, enrollment data, and scholarship/bursary systems</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search education management information systems, digital education strategies, qualification verification frameworks, student aid digitization programs</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_9\">Functionality<a class=\"headerlink\" href=\"#functionality_9\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"social-protection-integration\">Social Protection Integration<a class=\"headerlink\" href=\"#social-protection-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-socialprotection</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of social assistance programs, grant registries, beneficiary management systems</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review social protection strategies, SASSA-type agency plans, social registry frameworks, adaptive social protection programs, shock-responsive systems</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_10\">Functionality<a class=\"headerlink\" href=\"#functionality_10\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"agriculture-system-integration\">Agriculture System Integration<a class=\"headerlink\" href=\"#agriculture-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-agriculture</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of farmer registries, agricultural input vouchers, land registrations, extension services data</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search agricultural digitization strategies, farmer support program documentation, land administration systems, agri-tech initiatives</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_11\">Functionality<a class=\"headerlink\" href=\"#functionality_11\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"justice-system-integration\">Justice System Integration<a class=\"headerlink\" href=\"#justice-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-justice</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of court records, case management systems, correctional services data, legal aid information</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review justice sector ICT strategies, court digitization programs, case management system modernization, legal information systems</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_12\">Functionality<a class=\"headerlink\" href=\"#functionality_12\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"national-planning-statistics-integration\">National Planning &amp; Statistics Integration<a class=\"headerlink\" href=\"#national-planning-statistics-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-planning</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of statistics, census data, administrative data for planning, M&amp;E, and evidence-based policymaking</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search national statistics strategies, census digitization, secure data facility documentation, statistical business registers, data for development initiatives</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_13\">Functionality<a class=\"headerlink\" href=\"#functionality_13\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"employment-services-integration\">Employment Services Integration<a class=\"headerlink\" href=\"#employment-services-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-employment</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of job seeker registries, unemployment insurance, public employment programs, labor market information</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review labor department digital strategies, employment services modernization, unemployment insurance system documentation, youth employment platforms</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality_14\">Functionality<a class=\"headerlink\" href=\"#functionality_14\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"business-registration-licensing-integration\">Business Registration &amp; Licensing Integration<a class=\"headerlink\" href=\"#business-registration-licensing-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-business</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of company registration, business licensing, tax compliance, regulatory compliance data</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search companies registry digitization, business environment reform programs, e-licensing platforms, Doing Business reform initiatives</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"uptake\">Uptake<a class=\"headerlink\" href=\"#uptake\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"sub-national-participation\">Sub-National Participation<a class=\"headerlink\" href=\"#sub-national-participation\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-uptake-subnational</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Extent to which provincial/state and local governments participate in the data exchange</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=National level only; 2=Planned; 3=Under development; 4=Partial Participation; 5=Full Participation</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review intergovernmental relations frameworks, sub-national digitization strategies, local government ICT capacity assessments</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"inclusivity\">Inclusivity<a class=\"headerlink\" href=\"#inclusivity\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"universal-accessibility\">Universal Accessibility<a class=\"headerlink\" href=\"#universal-accessibility\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-incl-accessibility</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Extent to which the data exchange enables services accessible to all population groups including persons with disabilities, elderly, low literacy</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Limited accessibility; 2=Partial accessibility; 3=Accessibility improvements in progress; 4=Full accessibility</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review digital inclusion strategies, assistive digital policies, service design guidelines, disability inclusion frameworks, universal access commitments</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"inclusivity_1\">Inclusivity<a class=\"headerlink\" href=\"#inclusivity_1\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"urban-rural-digital-divide\">Urban-Rural Digital Divide<a class=\"headerlink\" href=\"#urban-rural-digital-divide\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-incl-urbanrural</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether data exchange infrastructure and services reach rural and remote areas or concentrate in urban centers</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Primarily urban; 2=Partial rural coverage; 3=Equitable Urban=Rural Coverage</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search rural development strategies, connectivity initiatives (SA Connect equivalents), service point mapping data, geographic coverage assessments</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"credibility\">Credibility<a class=\"headerlink\" href=\"#credibility\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"public-transparency\">Public Transparency<a class=\"headerlink\" href=\"#public-transparency\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-cred-transparency</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Level of public transparency regarding data exchange operations, governance, and data sharing agreements</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=None; 2=Low = Limited Disclosure; 3=Moderate = Annual Reports; 4=High = Public Dashboard &amp; Reports</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review open government commitments, transparency portals, public API catalogs, open data initiatives, right to information disclosures</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"credibility_1\">Credibility<a class=\"headerlink\" href=\"#credibility_1\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"data-sovereignty-provisions\">Data Sovereignty Provisions<a class=\"headerlink\" href=\"#data-sovereignty-provisions\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-cred-sovereignty</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Provisions ensuring national control over government data and protecting against unauthorized foreign access</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No controls; 2=Limited controls; 3=Strong yet unenforced controls; 4=Strong, enforced controls</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Details in comments. Include data localization requirements, foreign access restrictions, cloud service provider regulations</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search data localization laws, cloud policy frameworks, critical infrastructure protection, sovereignty considerations in digital strategies</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"governance_2\">Governance<a class=\"headerlink\" href=\"#governance_2\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"enabling-legislation\">Enabling Legislation<a class=\"headerlink\" href=\"#enabling-legislation\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-gov-legislation-exists</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether primary laws, acts, or legal instruments exist that establish authority for cross-government data sharing and govern the data exchange system</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No; 2= Under development; 3 = Yes</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Include names of acts/regulations in comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td></td>\n</tr>\n</tbody>\n</table>",
+    "content": "<h1 id=\"data-exchange-metadata\">Data exchange metadata<a class=\"headerlink\" href=\"#data-exchange-metadata\" title=\"Permanent link\">&para;</a></h1>\n<p>Variable definitions and collection guidance for the data exchange module.</p>\n<h2 id=\"system\">System<a class=\"headerlink\" href=\"#system\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"aianalytics-capabilities\">AI/Analytics Capabilities<a class=\"headerlink\" href=\"#aianalytics-capabilities\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-system-ai</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Is artificial intelligence integrated into the data exchange for data quality, fraud detection or predictive analytics</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No; 2=Planned; 3=Piloting; 4 =Functional across at least 2 systems</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Specify AI use cases in the comments: fraud detection, eligibility prediction, service recommendation, data quality assurance, policy simulation</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search for AI strategies, digital transformation roadmaps section on analytics, smart government initiatives, mentions of machine learning in service delivery</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"operational-status\">Operational Status<a class=\"headerlink\" href=\"#operational-status\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-system-operational</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Current operational status of the data exchange system</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not Established; 2=Planned; 3=Under Development; 4=Partially Operational; 5=Fully Operational</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Add name of system, url to comments. Also include in comments launch date if operational, expected launch if planned.</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review official government announcements, digital transformation roadmap timelines, progress reports from coordinating agencies, news from government portals</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"governance\">Governance<a class=\"headerlink\" href=\"#governance\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"strategic-framework\">Strategic Framework<a class=\"headerlink\" href=\"#strategic-framework\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-gov-strategy</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether a formal strategy or policy document exists specifically for government data exchange and interoperability</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=None; 2=Mentioned in Broader DPI/Digital Strategy; 3=Under Development; 4=Comprehensive Strategy Exists</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Include incomments document name, year published, planning horizon. Note if includes phased implementation approach</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search national digital transformation roadmaps, e-government strategies, DPI strategies, interoperability frameworks, whole-of-government ICT policies</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"implementation-roadmap\">Implementation Roadmap<a class=\"headerlink\" href=\"#implementation-roadmap\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-gov-roadmap</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether a detailed implementation roadmap with phases, milestones, and timelines exists for data exchange development</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No; 2= Under development; 3 = Yes</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Note in comments if roadmap is public, planning horizon (e.g., 2025-2030), number of phases. Include reference to key milestones</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review digital transformation roadmaps, implementation plans, project documents from coordinating ministries, Operation Vulindlela-type reform programs</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"functionality\">Functionality<a class=\"headerlink\" href=\"#functionality\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"digital-id-integration\">Digital ID Integration<a class=\"headerlink\" href=\"#digital-id-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-digitalid</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Extent to which the national digital identity system is integrated with the data exchange for identity verification and authentication</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search digital identity strategies, authentication frameworks, Digital ID system documentation, service delivery platforms, identity verification protocols</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"civil-registration-vital-statistics-integration\">Civil Registration &amp; Vital Statistics Integration<a class=\"headerlink\" href=\"#civil-registration-vital-statistics-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-crvs</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of CRVS data (births, deaths, marriages) into data exchange for real-time verification and service eligibility</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review civil registration modernization strategies, Home Affairs digital transformation plans, vital statistics system assessments, service integration reports</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"digital-payments-integration\">Digital Payments Integration<a class=\"headerlink\" href=\"#digital-payments-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-payments</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration with national payment systems for government-to-person (G2P), government-to-business (G2B) transactions via data exchange</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search digital payments strategies, G2P payment system documentation, financial inclusion frameworks, payment ecosystem modernization programs</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"tax-revenue-integration\">Tax &amp; Revenue Integration<a class=\"headerlink\" href=\"#tax-revenue-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-revenue</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of tax administration and revenue collection systems data into the exchange platform</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review tax administration modernization programs, revenue authority strategic plans, taxpayer services digitization initiatives</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"electoral-register-integration\">Electoral Register Integration<a class=\"headerlink\" href=\"#electoral-register-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-electoral</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of voter registration data for identity verification, demographic analysis, and service delivery targeting</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search electoral commission strategic plans, voter registration system documentation, election management body reports, data sharing agreements</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"passport-immigration-integration\">Passport &amp; Immigration Integration<a class=\"headerlink\" href=\"#passport-immigration-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-passport</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of passport issuance and immigration control data into the exchange platform</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review immigration authority digital strategies, border management systems, passport issuance modernization programs</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"driver-licensing-integration\">Driver Licensing Integration<a class=\"headerlink\" href=\"#driver-licensing-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-licensing</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of driver's license registration and traffic offence data</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search transport department digital strategies, licensing authority modernization plans, road traffic management systems</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"health-system-integration\">Health System Integration<a class=\"headerlink\" href=\"#health-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-health</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of health records, patient registration, immunization data, and health insurance into data exchange</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review health sector digital transformation strategies, eHealth frameworks, health information exchange initiatives, universal health coverage digitization</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"education-system-integration\">Education System Integration<a class=\"headerlink\" href=\"#education-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-education</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of learner records, academic credentials, enrollment data, and scholarship/bursary systems</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search education management information systems, digital education strategies, qualification verification frameworks, student aid digitization programs</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"social-protection-integration\">Social Protection Integration<a class=\"headerlink\" href=\"#social-protection-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-socialprotection</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of social assistance programs, grant registries, beneficiary management systems</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review social protection strategies, SASSA-type agency plans, social registry frameworks, adaptive social protection programs, shock-responsive systems</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"agriculture-system-integration\">Agriculture System Integration<a class=\"headerlink\" href=\"#agriculture-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-agriculture</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of farmer registries, agricultural input vouchers, land registrations, extension services data</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search agricultural digitization strategies, farmer support program documentation, land administration systems, agri-tech initiatives</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"justice-system-integration\">Justice System Integration<a class=\"headerlink\" href=\"#justice-system-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-justice</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of court records, case management systems, correctional services data, legal aid information</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review justice sector ICT strategies, court digitization programs, case management system modernization, legal information systems</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"national-planning-statistics-integration\">National Planning &amp; Statistics Integration<a class=\"headerlink\" href=\"#national-planning-statistics-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-planning</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of statistics, census data, administrative data for planning, M&amp;E, and evidence-based policymaking</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search national statistics strategies, census digitization, secure data facility documentation, statistical business registers, data for development initiatives</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"employment-services-integration\">Employment Services Integration<a class=\"headerlink\" href=\"#employment-services-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-employment</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of job seeker registries, unemployment insurance, public employment programs, labor market information</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review labor department digital strategies, employment services modernization, unemployment insurance system documentation, youth employment platforms</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"business-registration-licensing-integration\">Business Registration &amp; Licensing Integration<a class=\"headerlink\" href=\"#business-registration-licensing-integration\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-func-business</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Integration of company registration, business licensing, tax compliance, regulatory compliance data</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search companies registry digitization, business environment reform programs, e-licensing platforms, Doing Business reform initiatives</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"uptake\">Uptake<a class=\"headerlink\" href=\"#uptake\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"sub-national-participation\">Sub-National Participation<a class=\"headerlink\" href=\"#sub-national-participation\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-uptake-subnational</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Extent to which provincial/state and local governments participate in the data exchange</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=National level only; 2=Planned; 3=Under development; 4=Partial Participation; 5=Full Participation</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review intergovernmental relations frameworks, sub-national digitization strategies, local government ICT capacity assessments</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"inclusivity\">Inclusivity<a class=\"headerlink\" href=\"#inclusivity\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"universal-accessibility\">Universal Accessibility<a class=\"headerlink\" href=\"#universal-accessibility\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-incl-accessibility</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Extent to which the data exchange enables services accessible to all population groups including persons with disabilities, elderly, low literacy</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Limited accessibility; 2=Partial accessibility; 3=Accessibility improvements in progress; 4=Full accessibility</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review digital inclusion strategies, assistive digital policies, service design guidelines, disability inclusion frameworks, universal access commitments</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"urban-rural-digital-divide\">Urban-Rural Digital Divide<a class=\"headerlink\" href=\"#urban-rural-digital-divide\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-incl-urbanrural</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether data exchange infrastructure and services reach rural and remote areas or concentrate in urban centers</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=Primarily urban; 2=Partial rural coverage; 3=Equitable Urban=Rural Coverage</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search rural development strategies, connectivity initiatives (SA Connect equivalents), service point mapping data, geographic coverage assessments</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"credibility\">Credibility<a class=\"headerlink\" href=\"#credibility\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"public-transparency\">Public Transparency<a class=\"headerlink\" href=\"#public-transparency\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-cred-transparency</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Level of public transparency regarding data exchange operations, governance, and data sharing agreements</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=None; 2=Low = Limited Disclosure; 3=Moderate = Annual Reports; 4=High = Public Dashboard &amp; Reports</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Provide details in Comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Review open government commitments, transparency portals, public API catalogs, open data initiatives, right to information disclosures</td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"data-sovereignty-provisions\">Data Sovereignty Provisions<a class=\"headerlink\" href=\"#data-sovereignty-provisions\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-cred-sovereignty</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Provisions ensuring national control over government data and protecting against unauthorized foreign access</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No controls; 2=Limited controls; 3=Strong yet unenforced controls; 4=Strong, enforced controls</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Details in comments. Include data localization requirements, foreign access restrictions, cloud service provider regulations</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td>Search data localization laws, cloud policy frameworks, critical infrastructure protection, sovereignty considerations in digital strategies</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"governance_1\">Governance<a class=\"headerlink\" href=\"#governance_1\" title=\"Permanent link\">&para;</a></h2>\n<h3 id=\"enabling-legislation\">Enabling Legislation<a class=\"headerlink\" href=\"#enabling-legislation\" title=\"Permanent link\">&para;</a></h3>\n<table>\n<thead>\n<tr>\n<th>Field</th>\n<th>Value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Variable</td>\n<td>exchange-gov-legislation-exists</td>\n</tr>\n<tr>\n<td>Definition</td>\n<td>Whether primary laws, acts, or legal instruments exist that establish authority for cross-government data sharing and govern the data exchange system</td>\n</tr>\n<tr>\n<td>Format</td>\n<td>Categorical: 0=Unknown; 1=No; 2= Under development; 3 = Yes</td>\n</tr>\n<tr>\n<td>Other Metadata</td>\n<td>Include names of acts/regulations in comments</td>\n</tr>\n<tr>\n<td>Data Collection Guidelines</td>\n<td></td>\n</tr>\n</tbody>\n</table>",
     "search": [
       {
         "location": null,
@@ -24,14 +24,6 @@
         "level": 3,
         "title": "AI/Analytics Capabilities",
         "text": "Field Value Variable exchange-system-ai Definition Is artificial intelligence integrated into the data exchange for data quality, fraud detection or predictive analytics Format Categorical: 0=Unknown; 1=No; 2=Planned; 3=Piloting; 4 =Functional across at least 2 systems Other Metadata Specify AI use cases in the comments: fraud detection, eligibility prediction, service recommendation, data quality assurance, policy simulation Data Collection Guidelines Search for AI strategies, digital transformation roadmaps section on analytics, smart government initiatives, mentions of machine learning in service delivery",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "system_1",
-        "level": 2,
-        "title": "System",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -60,14 +52,6 @@
         "tags": []
       },
       {
-        "location": "governance_1",
-        "level": 2,
-        "title": "Governance",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "implementation-roadmap",
         "level": 3,
         "title": "Implementation Roadmap",
@@ -92,26 +76,10 @@
         "tags": []
       },
       {
-        "location": "functionality_1",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "civil-registration-vital-statistics-integration",
         "level": 3,
         "title": "Civil Registration &amp; Vital Statistics Integration",
         "text": "Field Value Variable exchange-func-crvs Definition Integration of CRVS data (births, deaths, marriages) into data exchange for real-time verification and service eligibility Format Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated Other Metadata Provide details in Comments Data Collection Guidelines Review civil registration modernization strategies, Home Affairs digital transformation plans, vital statistics system assessments, service integration reports",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "functionality_2",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -124,26 +92,10 @@
         "tags": []
       },
       {
-        "location": "functionality_3",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "tax-revenue-integration",
         "level": 3,
         "title": "Tax &amp; Revenue Integration",
         "text": "Field Value Variable exchange-func-revenue Definition Integration of tax administration and revenue collection systems data into the exchange platform Format Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated Other Metadata Provide details in Comments Data Collection Guidelines Review tax administration modernization programs, revenue authority strategic plans, taxpayer services digitization initiatives",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "functionality_4",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -156,26 +108,10 @@
         "tags": []
       },
       {
-        "location": "functionality_5",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "passport-immigration-integration",
         "level": 3,
         "title": "Passport &amp; Immigration Integration",
         "text": "Field Value Variable exchange-func-passport Definition Integration of passport issuance and immigration control data into the exchange platform Format Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated Other Metadata Provide details in Comments Data Collection Guidelines Review immigration authority digital strategies, border management systems, passport issuance modernization programs",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "functionality_6",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -188,26 +124,10 @@
         "tags": []
       },
       {
-        "location": "functionality_7",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "health-system-integration",
         "level": 3,
         "title": "Health System Integration",
         "text": "Field Value Variable exchange-func-health Definition Integration of health records, patient registration, immunization data, and health insurance into data exchange Format Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated Other Metadata Provide details in Comments Data Collection Guidelines Review health sector digital transformation strategies, eHealth frameworks, health information exchange initiatives, universal health coverage digitization",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "functionality_8",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -220,26 +140,10 @@
         "tags": []
       },
       {
-        "location": "functionality_9",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "social-protection-integration",
         "level": 3,
         "title": "Social Protection Integration",
         "text": "Field Value Variable exchange-func-socialprotection Definition Integration of social assistance programs, grant registries, beneficiary management systems Format Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated Other Metadata Provide details in Comments Data Collection Guidelines Review social protection strategies, SASSA-type agency plans, social registry frameworks, adaptive social protection programs, shock-responsive systems",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "functionality_10",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -252,26 +156,10 @@
         "tags": []
       },
       {
-        "location": "functionality_11",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "justice-system-integration",
         "level": 3,
         "title": "Justice System Integration",
         "text": "Field Value Variable exchange-func-justice Definition Integration of court records, case management systems, correctional services data, legal aid information Format Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated Other Metadata Provide details in Comments Data Collection Guidelines Review justice sector ICT strategies, court digitization programs, case management system modernization, legal information systems",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "functionality_12",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -284,26 +172,10 @@
         "tags": []
       },
       {
-        "location": "functionality_13",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "employment-services-integration",
         "level": 3,
         "title": "Employment Services Integration",
         "text": "Field Value Variable exchange-func-employment Definition Integration of job seeker registries, unemployment insurance, public employment programs, labor market information Format Categorical: 0=Unknown; 1=Not integrated; 2=Planned; 3=Under development; 4=Partially integrated; 5=Fully Integrated Other Metadata Provide details in Comments Data Collection Guidelines Review labor department digital strategies, employment services modernization, unemployment insurance system documentation, youth employment platforms",
-        "path": [],
-        "tags": []
-      },
-      {
-        "location": "functionality_14",
-        "level": 2,
-        "title": "Functionality",
-        "text": "",
         "path": [],
         "tags": []
       },
@@ -348,14 +220,6 @@
         "tags": []
       },
       {
-        "location": "inclusivity_1",
-        "level": 2,
-        "title": "Inclusivity",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "urban-rural-digital-divide",
         "level": 3,
         "title": "Urban-Rural Digital Divide",
@@ -380,14 +244,6 @@
         "tags": []
       },
       {
-        "location": "credibility_1",
-        "level": 2,
-        "title": "Credibility",
-        "text": "",
-        "path": [],
-        "tags": []
-      },
-      {
         "location": "data-sovereignty-provisions",
         "level": 3,
         "title": "Data Sovereignty Provisions",
@@ -396,7 +252,7 @@
         "tags": []
       },
       {
-        "location": "governance_2",
+        "location": "governance_1",
         "level": 2,
         "title": "Governance",
         "text": "",
@@ -430,15 +286,7 @@
                 "url": "#aianalytics-capabilities",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "System",
-            "id": "system_1",
-            "url": "#system_1",
-            "children": [
+              },
               {
                 "title": "Operational Status",
                 "id": "operational-status",
@@ -460,15 +308,7 @@
                 "url": "#strategic-framework",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Governance",
-            "id": "governance_1",
-            "url": "#governance_1",
-            "children": [
+              },
               {
                 "title": "Implementation Roadmap",
                 "id": "implementation-roadmap",
@@ -490,210 +330,98 @@
                 "url": "#digital-id-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_1",
-            "url": "#functionality_1",
-            "children": [
+              },
               {
                 "title": "Civil Registration &amp; Vital Statistics Integration",
                 "id": "civil-registration-vital-statistics-integration",
                 "url": "#civil-registration-vital-statistics-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_2",
-            "url": "#functionality_2",
-            "children": [
+              },
               {
                 "title": "Digital Payments Integration",
                 "id": "digital-payments-integration",
                 "url": "#digital-payments-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_3",
-            "url": "#functionality_3",
-            "children": [
+              },
               {
                 "title": "Tax &amp; Revenue Integration",
                 "id": "tax-revenue-integration",
                 "url": "#tax-revenue-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_4",
-            "url": "#functionality_4",
-            "children": [
+              },
               {
                 "title": "Electoral Register Integration",
                 "id": "electoral-register-integration",
                 "url": "#electoral-register-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_5",
-            "url": "#functionality_5",
-            "children": [
+              },
               {
                 "title": "Passport &amp; Immigration Integration",
                 "id": "passport-immigration-integration",
                 "url": "#passport-immigration-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_6",
-            "url": "#functionality_6",
-            "children": [
+              },
               {
                 "title": "Driver Licensing Integration",
                 "id": "driver-licensing-integration",
                 "url": "#driver-licensing-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_7",
-            "url": "#functionality_7",
-            "children": [
+              },
               {
                 "title": "Health System Integration",
                 "id": "health-system-integration",
                 "url": "#health-system-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_8",
-            "url": "#functionality_8",
-            "children": [
+              },
               {
                 "title": "Education System Integration",
                 "id": "education-system-integration",
                 "url": "#education-system-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_9",
-            "url": "#functionality_9",
-            "children": [
+              },
               {
                 "title": "Social Protection Integration",
                 "id": "social-protection-integration",
                 "url": "#social-protection-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_10",
-            "url": "#functionality_10",
-            "children": [
+              },
               {
                 "title": "Agriculture System Integration",
                 "id": "agriculture-system-integration",
                 "url": "#agriculture-system-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_11",
-            "url": "#functionality_11",
-            "children": [
+              },
               {
                 "title": "Justice System Integration",
                 "id": "justice-system-integration",
                 "url": "#justice-system-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_12",
-            "url": "#functionality_12",
-            "children": [
+              },
               {
                 "title": "National Planning &amp; Statistics Integration",
                 "id": "national-planning-statistics-integration",
                 "url": "#national-planning-statistics-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_13",
-            "url": "#functionality_13",
-            "children": [
+              },
               {
                 "title": "Employment Services Integration",
                 "id": "employment-services-integration",
                 "url": "#employment-services-integration",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Functionality",
-            "id": "functionality_14",
-            "url": "#functionality_14",
-            "children": [
+              },
               {
                 "title": "Business Registration &amp; Licensing Integration",
                 "id": "business-registration-licensing-integration",
@@ -730,15 +458,7 @@
                 "url": "#universal-accessibility",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Inclusivity",
-            "id": "inclusivity_1",
-            "url": "#inclusivity_1",
-            "children": [
+              },
               {
                 "title": "Urban-Rural Digital Divide",
                 "id": "urban-rural-digital-divide",
@@ -760,15 +480,7 @@
                 "url": "#public-transparency",
                 "children": [],
                 "level": 3
-              }
-            ],
-            "level": 2
-          },
-          {
-            "title": "Credibility",
-            "id": "credibility_1",
-            "url": "#credibility_1",
-            "children": [
+              },
               {
                 "title": "Data Sovereignty Provisions",
                 "id": "data-sovereignty-provisions",
@@ -781,8 +493,8 @@
           },
           {
             "title": "Governance",
-            "id": "governance_2",
-            "url": "#governance_2",
+            "id": "governance_1",
+            "url": "#governance_1",
             "children": [
               {
                 "title": "Enabling Legislation",
@@ -799,5 +511,5 @@
       }
     ]
   },
-  "hash": 4783704042712521960
+  "hash": 6817951303747277653
 }
