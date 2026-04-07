@@ -1,27 +1,27 @@
 {
   "data": {
     "meta": {},
-    "content": "<h1 id=\"africa-dpi\">africa-dpi<a class=\"headerlink\" href=\"#africa-dpi\" title=\"Permanent link\">&para;</a></h1>\n<p>For full documentation visit <a href=\"https://zensical.org/docs/\">zensical.org</a></p>",
+    "content": "<h1 id=\"africa-dpi-methodology\">Africa DPI Methodology<a class=\"headerlink\" href=\"#africa-dpi-methodology\" title=\"Permanent link\">&para;</a></h1>\n<p>Overview</p>",
     "search": [
       {
         "location": null,
         "level": 1,
-        "title": "africa-dpi",
-        "text": "<p>For full documentation visit zensical.org</p>",
+        "title": "Africa DPI Methodology",
+        "text": "<p>Overview</p>",
         "path": [],
         "tags": []
       }
     ],
-    "title": "africa-dpi",
+    "title": "Africa DPI Methodology",
     "toc": [
       {
-        "title": "africa-dpi",
-        "id": "africa-dpi",
-        "url": "#africa-dpi",
+        "title": "Africa DPI Methodology",
+        "id": "africa-dpi-methodology",
+        "url": "#africa-dpi-methodology",
         "children": [],
         "level": 1
       }
     ]
   },
-  "hash": 9123104828536396136
+  "hash": 5758719244203920097
 }
