@@ -1,4 +1,4 @@
-# Data collection methodology
+# Continental data collection methodology
 
 Is it possible to collect reasonably accurate, comparable data for 54 countries on a limited budget? This was the challenge taken on for this exercise.
 

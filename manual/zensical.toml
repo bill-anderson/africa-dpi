@@ -46,8 +46,9 @@ Copyright &copy; 2026 The authors
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
    { "Home" = "index.md" },
-   { "Data collection methodology" = "methodology.md" },
+   { "Continental data collection" = "methodology.md" },
    { "Third-party datasets" = "third-party-data.md" },
+   { "Case study data" = "case-study-data.md" },
    {"Continental Metadata" = [
      {"Data exchange" = "data-exchange-metadata.md" },
      {"Digital identity" = "digital-id-metadata.md" },
@@ -60,7 +61,11 @@ nav = [
      {"Ibrahim Governance Index" = "ibrahim-metadata.md" },
     ]},
    {"Case Study Metadata" = [
-     {"Data exchange" = "data-exchange-metadata.md" },
+     {"Data exchange" = "case-data-exchange-metadata.md" },
+     {"Digital identity" = "case-digital-id-metadata.md" },
+     {"Digital payments" = "case-digital-pay-metadata.md" },
+     {"Institutional stakeholders" = "case-institution-stakeholder-metadata.md" },
+     {"Individual stakeholders" = "case-individual-stakeholder-metadata.md" },
     ]}
 ]
 
