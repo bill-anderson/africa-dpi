@@ -634,6 +634,22 @@ const [dpiData, geoData] = await Promise.all([
 
 const { hierarchy, countries } = dpiData;
 
+// Preferred chapter tab order (unlisted chapters appear after these)
+const CHAPTER_ORDER = [
+  'ICT Infrastructure',
+  'Data Exchange',
+  'Digital Id',
+  'Digital Pay',
+  'Registries'
+];
+hierarchy.sort((a, b) => {
+  const ai = CHAPTER_ORDER.indexOf(a.name);
+  const bi = CHAPTER_ORDER.indexOf(b.name);
+  const aRank = ai >= 0 ? ai : CHAPTER_ORDER.length + hierarchy.indexOf(a);
+  const bRank = bi >= 0 ? bi : CHAPTER_ORDER.length + hierarchy.indexOf(b);
+  return aRank - bRank;
+});
+
 // Build lookup: iso3 -> country
 const countryByIso = {};
 countries.forEach(c => { countryByIso[c.iso3] = c; });
